@@ -27,7 +27,8 @@ RUN git clone https://github.com/SpencerPark/IJava.git --depth 1 && \
        cd IJava/
 
 WORKDIR /home/jovyan/IJava
-RUN chmod u+x ./gradlew && ./gradlew installKernel
+RUN chmod u+x ./gradlew
+RUN ./gradlew installKernel
 
 RUN mkdir ~/notebooks
 
