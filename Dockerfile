@@ -17,7 +17,8 @@ RUN git clone https://github.com/SpencerPark/jupyter-jvm-basekernel.git --depth 
 WORKDIR /home/jovyan/jupyter-jvm-basekernel
 RUN echo "Currently (should be /home(jovyan/jupyter-jvm-basekernel) in $(pwd)"
 RUN echo $(ls -al)
-RUN chmod u+x gradlew && ./gradlew publishToMavenLocal && cd /home/jovyan
+RUN chmod u+x gradlew
+RUN ./gradlew publishToMavenLocal && cd /home/jovyan
 
 RUN cd /home/jovyan
 
